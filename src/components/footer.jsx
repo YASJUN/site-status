@@ -9,6 +9,7 @@ const Footer = () => {
   const homeUrl = import.meta.env.VITE_HOME_URL;
   const emailUrl = import.meta.env.VITE_EMAIL_URL;
   const siteIcp = import.meta.env.VITE_SITE_ICP;
+  const siteMoeIcp = import.meta.env.VITE_SITE_MoeICP;
 
   return (
     <footer id="footer">
@@ -34,13 +35,19 @@ const Footer = () => {
           &nbsp;接口&nbsp;|&nbsp;检测频率 5 分钟
         </p>
         <p>
-          Copyright&nbsp;&copy;&nbsp;2020&nbsp;-&nbsp;{new Date().getFullYear()}
+          Copyright&nbsp;&copy;&nbsp;2019&nbsp;-&nbsp;{new Date().getFullYear()}
           &nbsp;
-          <CustomLink to="https://www.imsyy.top/" text="無名" />
+          <CustomLink to="https://space.bilibili.com/12982030" text="丿丶夜曦" />
           {siteIcp ? (
             <React.Fragment>
               &nbsp;|&nbsp;
               <CustomLink to="https://beian.miit.gov.cn/" text={siteIcp} />
+            </React.Fragment>
+          ) : null}
+          {siteMoeIcp ? (
+            <React.Fragment>
+              &nbsp;|&nbsp;
+              <CustomLink to="https://beian.miit.gov.cn/" text={siteMoeIcp} />
             </React.Fragment>
           ) : null}
         </p>

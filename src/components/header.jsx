@@ -14,7 +14,7 @@ const Header = observer(({ getSiteData }) => {
 
   // 加载配置
   const siteName = import.meta.env.VITE_SITE_NAME;
-
+  console.log(siteName)
   // 状态文本
   const statusNames = {
     loading: "站点状态加载中",
